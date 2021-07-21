@@ -1,10 +1,14 @@
-<mat-toolbar color="primary">
-  <span>API calls and charts example</span>
-</mat-toolbar>
-<nav mat-tab-nav-bar mat-align-tabs="center">
-  <a mat-tab-link *ngFor="let link of links"
-     [routerLink]="link.url"
-     (click)="activeLink = link.url"
-     [active]="activeLink == link.url">{{link.name}}</a>
-</nav>
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <span>API calls and charts example</span>
+    </mat-toolbar>
+    <nav mat-tab-nav-bar mat-align-tabs="center">
+      <a mat-tab-link *ngFor="let link of links"
+         [routerLink]="link.url"
+         (click)="activeLink = link.url"
+         [active]="activeLink == link.url">{{link.name}}</a>
+    </nav>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
