@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FemaleComponent } from './female.component';
+import { DisplayChartComponent } from './display-chart.component';
 
-describe('FemaleComponent', () => {
-  let component: FemaleComponent;
-  let fixture: ComponentFixture<FemaleComponent>;
+describe('DisplayChartComponent', () => {
+  let component: DisplayChartComponent;
+  let fixture: ComponentFixture<DisplayChartComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FemaleComponent ]
+      declarations: [ DisplayChartComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FemaleComponent);
+    fixture = TestBed.createComponent(DisplayChartComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

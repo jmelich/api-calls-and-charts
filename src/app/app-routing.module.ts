@@ -1,14 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {UnisexComponent} from "./components/unisex/unisex.component";
-import {FemaleComponent} from "./components/female/female.component";
-import {MaleComponent} from "./components/male/male.component";
+import {DisplayChartComponent} from "./components/display-chart/display-chart.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: 'unisex', pathMatch: 'full' },
-  { path: 'unisex', component:  UnisexComponent},
-  { path: 'female', component:  FemaleComponent},
-  { path: 'male', component:  MaleComponent},
+  { path: '', redirectTo: 'both', pathMatch: 'full' },
+  { path: ':sex', component:  DisplayChartComponent},
 ];
 
 @NgModule({

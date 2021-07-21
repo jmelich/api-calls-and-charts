@@ -8,10 +8,10 @@ import {Router} from "@angular/router";
 })
 export class AppComponent implements OnInit{
 
-  activeLink = '/unisex';
+  activeLink = '/both';
 
   links = [
-    {name: 'Ambos sexos', url: '/unisex'},
+    {name: 'Ambos sexos', url: '/both'},
     {name: 'Femenino', url: '/female'},
     {name: 'Masculino', url: '/male'},
   ]

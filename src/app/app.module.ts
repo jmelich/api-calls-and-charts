@@ -6,23 +6,23 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTabsModule} from "@angular/material/tabs";
 import {MatToolbarModule} from "@angular/material/toolbar";
-import { UnisexComponent } from './components/unisex/unisex.component';
-import { MaleComponent } from './components/male/male.component';
-import { FemaleComponent } from './components/female/female.component';
+import {HttpClientModule} from "@angular/common/http";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
+import { DisplayChartComponent } from './components/display-chart/display-chart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UnisexComponent,
-    MaleComponent,
-    FemaleComponent
+    DisplayChartComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTabsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    HttpClientModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
