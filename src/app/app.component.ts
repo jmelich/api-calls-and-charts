@@ -11,9 +11,9 @@ export class AppComponent implements OnInit{
   activeLink = '/both';
 
   links = [
-    {name: 'Ambos sexos', url: '/both'},
-    {name: 'Femenino', url: '/female'},
-    {name: 'Masculino', url: '/male'},
+    {name: 'Both', url: '/both'},
+    {name: 'Female', url: '/female'},
+    {name: 'Male', url: '/male'},
   ]
 
   constructor(
