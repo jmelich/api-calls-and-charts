@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
+import {GeographicData} from "../../models/geographic-data";
+import {GeographicDataService} from "../../services/geographic-data.service";
 
 @Component({
   selector: 'app-display-chart',
@@ -8,15 +10,23 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class DisplayChartComponent implements OnInit {
 
-  filter: string | undefined;
+  segment: string | undefined;
+
+  geographicData: GeographicData[] | undefined;
 
   constructor(
     private route: ActivatedRoute,
+    private geographicDataService: GeographicDataService
   ) { }
 
   ngOnInit(): void {
+
+    this.geographicDataService.getData().subscribe( data => {
+      this.geographicData = data;
+    })
+
     this.route.params.subscribe(params => {
-      this.filter = params.sex;
+      this.segment = params.segment;
     });
   }
 

@@ -4,7 +4,7 @@ import {DisplayChartComponent} from "./components/display-chart/display-chart.co
 
 const routes: Routes = [
   { path: '', redirectTo: 'both', pathMatch: 'full' },
-  { path: ':sex', component:  DisplayChartComponent},
+  { path: ':segment', component:  DisplayChartComponent},
 ];
 
 @NgModule({

@@ -9,11 +9,13 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {HttpClientModule} from "@angular/common/http";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import { DisplayChartComponent } from './components/display-chart/display-chart.component';
+import { ParametrizedGeographicalChartComponent } from './components/parametrized-geographical-chart/parametrized-geographical-chart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DisplayChartComponent,
+    ParametrizedGeographicalChartComponent,
   ],
   imports: [
     BrowserModule,
