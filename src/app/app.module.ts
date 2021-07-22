@@ -6,12 +6,13 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTabsModule} from "@angular/material/tabs";
 import {MatToolbarModule} from "@angular/material/toolbar";
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import { DisplayChartComponent } from './components/display-chart/display-chart.component';
 import {ChartsModule} from "ng2-charts";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatSidenavModule} from "@angular/material/sidenav";
+import {CachingInterceptor} from "./interceptors/caching.interceptor";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,9 @@ import {MatSidenavModule} from "@angular/material/sidenav";
     MatGridListModule,
     MatSidenavModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: CachingInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
